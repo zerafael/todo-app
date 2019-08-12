@@ -4,15 +4,15 @@
     </head>
     <body>
         <div>
-            <p>publicado: 14.06.2014, 12:14</p>
-            <h2><a href="">Meu primeiro item</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <h1><a href="/">ToDo List</a></h1>
         </div>
 
-        <div>
-            <p>publicado: 14.06.2014, 12:14</p>
-            <h2><a href="">Meu segundo item</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
+        {% for todo in todos %}
+            <div>
+                <p>created: {{ todo.created_at }}</p>
+                <h2><a href="">{{ todo.title }}</a></h2>
+                <p>{{ todo.description|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
