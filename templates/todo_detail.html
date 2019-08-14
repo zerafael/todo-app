@@ -5,6 +5,7 @@
         <div class="date">
             {{ todo.created_at }}
         </div>
+        <a class="btn btn-link" href="{% url 'todo_edit' pk=todo.pk %}">Editar</a>
         <h2>{{ todo.title }}</h2>
         <p>{{ todo.description|linebreaksbr }}</p>
     </div>

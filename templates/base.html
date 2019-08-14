@@ -10,6 +10,9 @@
     </head>
     <body>
         <div class="page-header">
+        {% if request.get_full_path != "/todo/new/" %}
+            <a href="{% url 'todo_new' %}" class="top-menu">+ New</span></a>
+        {% endif %}
             <h1><a href="/">ToDo List</a></h1>
         </div>
 
